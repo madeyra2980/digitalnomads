@@ -1,5 +1,6 @@
 const charactersContainer = document.querySelector('.characters_container');
 const buttonBack = document.querySelector('#backButton')
+const buttonNext = document.querySelector('#nextButton')
 
 function getFetchData() {
     fetch('../data/charactersItem.json')
@@ -29,14 +30,16 @@ function getFetchData() {
                         item.style.transition = 'opacity 0.5s';
                         item.style.opacity = '0';
                         buttonBack.style.display = 'block'
+                        buttonNext.style.display = 'block'
                     });
 
-                buttonBack.addEventListener('click', ()=>{ 
-                    
-                    buttonBack.style.display = 'none'
-                    getFetchData()
+                    buttonBack.addEventListener('click', () => {
 
-                })
+                        buttonBack.style.display = 'none'
+                        buttonNext.style.display = 'none'
+                        getFetchData()
+
+                    })
 
                     setTimeout(() => {
                         charactersContainer.innerHTML = '';
