@@ -1,0 +1,81 @@
+.characters_container { 
+    position: absolute;
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr;
+    justify-items: center;
+    width: 100%;
+    height: 100%; 
+    gap: 20px; 
+    align-items: center; 
+    justify-content: center;
+    
+}
+
+.characters_container h2{ 
+    font-size: 30px;
+    text-align: center;
+    width: 300px;
+    color:rgb(223, 221, 221);
+    font-family: "Kelly Slab", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+}
+
+
+#backButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 11011;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.description-content-character.show {
+    opacity: 1;
+}
+
+.characters_container p{ 
+    text-align: center;
+    color: white;
+    font-family: "Kelly Slab", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+    .characters_container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .characters_container {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (max-width: 600px) {
+    .characters_container {
+        gap: 10px;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+    }
+}
